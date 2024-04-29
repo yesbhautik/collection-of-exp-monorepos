@@ -28,7 +28,7 @@ const dalle = async (m, Matrix) => {
     });
   }} catch (err) {
     console.log(err)
-    Matrix.sendMessage(m.from, { text: Something Went Erroring... }, {quoted: m});
+    Matrix.sendMessage(m.from, { text: 'Something Went Erroring...'}, {quoted: m});
   }
 }
 
