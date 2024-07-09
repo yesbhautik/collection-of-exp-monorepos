@@ -3464,6 +3464,11 @@ li {
   transform: rotate(20deg);
 }
 
+.peralta-regular {
+  font-family: "Peralta", serif;
+  font-style: normal;
+}
+
 .hero-heading-2 {
   z-index: 1;
   text-shadow: -17px 17px #1f2024;
@@ -3472,6 +3477,8 @@ li {
   margin-bottom: 0;
   font-size: 16vw;
   position: relative;
+  font-family: "Peralta", serif;
+  font-style: normal;
 }
 
 .hero-heading-2:hover {
@@ -4165,16 +4172,11 @@ li {
 
 @font-face {
   font-family: "Right Grotesk";
-  src: url("../fonts/0LA9BjMcnAKq.woff2")
-      format("woff2"),
-    url("../fonts/9os2VeNKH399.eot")
-      format("embedded-opentype"),
-    url("../fonts/6iYTqZ9Iwg4w.woff")
-      format("woff"),
-    url("../fonts/glx8gnz7zNkS.ttf")
-      format("truetype"),
-    url("../fonts/jJ3iglUTENV5.otf")
-      format("opentype");
+  src: url("../fonts/0LA9BjMcnAKq.woff2") format("woff2"),
+    url("../fonts/9os2VeNKH399.eot") format("embedded-opentype"),
+    url("../fonts/6iYTqZ9Iwg4w.woff") format("woff"),
+    url("../fonts/glx8gnz7zNkS.ttf") format("truetype"),
+    url("../fonts/jJ3iglUTENV5.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
