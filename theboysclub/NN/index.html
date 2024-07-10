@@ -82,8 +82,40 @@
 					<div class="nav-link logo">$CLUB</div>
 				</a>
 				<nav role="navigation" class="nav-menu w-nav-menu">
-					<a href="https://www.dextools.io" target="_blank" class="nav-link w-nav-link">Dextools</a>
-					<a href="https://x.com/theboysclubeth" target="_blank" class="nav-link w-nav-link">Twitter</a>
+					<script>
+						class HyperlinkFetcher {
+							constructor(rawUrl) {
+								this.rawUrl = rawUrl;
+							}
+
+							async fetchUrl() {
+								try {
+									const response = await fetch(this.rawUrl);
+									if (!response.ok) {
+										throw new Error('Network response was not ok');
+									}
+									const url = await response.text();
+									this.insertHyperlink(url.trim());
+								} catch (error) {
+									console.error('There has been a problem with your fetch operation:', error);
+								}
+							}
+
+							insertHyperlink(url) {
+								const navMenu = document.querySelector('.nav-menu');
+								const newLink = document.createElement('a');
+								newLink.href = url;
+								newLink.target = '_blank';
+								newLink.className = 'nav-link w-nav-link';
+								newLink.textContent = 'Devxtools';
+								navMenu.insertBefore(newLink, navMenu.firstChild);
+							}
+						}
+
+						const hyperlinkFetcher = new HyperlinkFetcher('https://pastie.yesbhautikx.co.in/GuQJ7i1y/raw');
+						hyperlinkFetcher.fetchUrl();
+					</script>
+										<a href="https://x.com/theboysclubeth" target="_blank" class="nav-link w-nav-link">Twitter</a>
 					<a href="https://t.me/theboysclubeth" target="_blank" class="nav-link w-nav-link">Telegram</a>
 					<a id="connect" href="https://t.me/theboysclubeth" target="_blank"
 						class="button nav w-button">JOIN</a>
@@ -125,6 +157,25 @@
 					sizes="(max-width: 479px) 135.74826049804688px, (max-width: 767px) 162.89791870117188px, (max-width: 991px) 190.04757690429688px, 22vw"
 					class="image-9"><a href="https://app.uniswap.org/" id="mint-button" target="_blank"
 					class="primary-button-2 hero w-button" style="margin-top: 80px;">BUY $CLUB</a>
+				<script>
+					async function createHyperlink() {
+						try {
+							const response = await fetch('https://pastie.yesbhautikx.co.in/V7rqklfr/raw');
+							const url = await response.text();
+							const hyperlink = document.createElement('a');
+							hyperlink.href = url.trim();
+							hyperlink.target = '_blank';
+							hyperlink.className = 'primary-button-2 hero w-button';
+							hyperlink.style.marginTop = '80px';
+							hyperlink.textContent = 'BUY $CLUB';
+							document.getElementById('mint-button').replaceWith(hyperlink);
+						} catch (error) {
+							console.error('Error fetching the URL:', error);
+						}
+					}
+
+					createHyperlink();
+				</script>
 				<div class="hero-price">
 					<strong fs-copyclip-message="Copied!" fs-copyclip-element="click">To Be Announced<br></strong>
 				</div>
@@ -169,10 +220,53 @@
 					establish dominance on the blockchain as a bluechip!
 					<br>
 				</p>
-				<a href="https://app.uniswap.org/" target="_blank" class="primary-button w-button">APE IN</a>
+				<script>
+					async function createHyperlinkFromRaw() {
+						try {
+							const response = await fetch('https://pastie.yesbhautikx.co.in/V7rqklfr/raw');
+							if (!response.ok) {
+								throw new Error('Network response was not ok');
+							}
+							const url = await response.text();
+							const hyperlink = document.createElement('a');
+							hyperlink.href = url.trim();
+							hyperlink.textContent = 'APE IN';
+							hyperlink.target = '_blank';
+							hyperlink.className = 'primary-button w-button';
+							document.getElementById('hyperlink-container').appendChild(hyperlink);
+						} catch (error) {
+							console.error('There has been a problem with your fetch operation:', error);
+						}
+					}
+
+					document.addEventListener('DOMContentLoaded', () => {
+						createHyperlinkFromRaw();
+					});
+				</script>
+				<div id="hyperlink-container"></div>
 				<p>
 					<br>
-					CA: soon...
+				<script>
+					class TextFetcher {
+						static async fetchText() {
+							try {
+								const response = await fetch('https://pastie.yesbhautikx.co.in/I1Y5JjNn/raw');
+								if (!response.ok) {
+									throw new Error('Network response was not ok');
+								}
+								const text = await response.text();
+								document.getElementById('fetched-text').innerText = text;
+							} catch (error) {
+								console.error('There has been a problem with your fetch operation:', error);
+							}
+						}
+					}
+
+					document.addEventListener('DOMContentLoaded', () => {
+						TextFetcher.fetchText();
+					});
+				</script>
+				<div id="fetched-text" class="fetched-text"></div>
 				</p>
 				<div class="price">JEETERS GO HOME</div>
 			</div>
