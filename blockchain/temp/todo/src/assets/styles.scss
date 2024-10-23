@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "_variables.scss";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+$subtle-blue-color: lighten($primary, 45%);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $subtle-blue-color;
+}
+
+.todos-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+#newtodoinput {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) inset !important;
+  background-color: $subtle-blue-color;
+}
+
+.todo-list-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.list-group-item {
+  background: transparent;
+}
+
+.form-check-input {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+
+  &.router-link-active {
+    color: rgba(var(--bs-primary-rgb));
+  }
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.txconfirmation {
+  color: green;
+  font-weight: bold;
+  text-transform: uppercase;
+}
